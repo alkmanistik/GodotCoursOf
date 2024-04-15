@@ -3,13 +3,9 @@
 	Содержимое можно посмотреть в пдф
 """
 
-extends Node
+class_name Module
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var moduleName: String
+var description: String
+var blockList: Array[Block]
+var resetProgress: bool

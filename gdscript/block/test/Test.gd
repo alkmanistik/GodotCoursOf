@@ -3,14 +3,9 @@
 	Содержимое можно посмотреть в пдф
 """
 
-extends Node
+class_name Test extends Block
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var question: String
+var descriptionQuestion: String
+var arrayVariant: Array
+var descriptionRightAnswer: String
