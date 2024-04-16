@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqthli56l80dr"]
+
+[ext_resource type="Texture2D" uid="uid://doix2ofy307yj" path="res://resource/course.png" id="1_l5i8k"]
+[ext_resource type="Script" path="res://ui/blockui/course.gd" id="1_lgt5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wi6q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwtvu"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+
+[node name="Course" type="PanelContainer"]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 140.0
+offset_bottom = 116.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wi6q")
+script = ExtResource("1_lgt5g")
+
+[node name="Content" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wwtvu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Content/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("1_l5i8k")
+expand_mode = 1
+
+[node name="Spacer" type="Control" parent="Content/HBoxContainer"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CourseName" type="Label" parent="Content/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Название курса
+"
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="Content/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Content/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Course" type="Button" parent="."]
+layout_mode = 2
+flat = true
+
+[connection signal="pressed" from="Course" to="." method="_on_course_pressed"]
