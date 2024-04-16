@@ -6,8 +6,8 @@
 
 extends Node
 
-@onready var saveCourseList = []
-@onready var currentCourse = null
+@onready var saveCourseList: Array[Course] = []
+@onready var currentCourse: Course = null
 
 func loadNewCourse()-> bool:
 	return false

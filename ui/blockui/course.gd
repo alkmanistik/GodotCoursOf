@@ -1,10 +1,10 @@
 extends PanelContainer
 
-var currentCourse
+var currentCourse: Course
 
-func fillContent(course):
+func fillContent(course: Course):
 	currentCourse = course
-	%CourseName.text = currentCourse.name
+	%CourseName.text = currentCourse.courseName
 
 
 func _on_course_pressed():
