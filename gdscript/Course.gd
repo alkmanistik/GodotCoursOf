@@ -3,14 +3,10 @@
 	Содержимое можно посмотреть в пдф
 """
 
-extends Node
+class_name Course
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var id: int
+var courseName: String
+var description: String
+var imageLogo: PackedByteArray
+var moduleList: Array[Module]
