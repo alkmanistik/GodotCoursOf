@@ -17,3 +17,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 Path="*res://gdscript/Path.gd"
+Global="*res://gdscript/Global.gd"

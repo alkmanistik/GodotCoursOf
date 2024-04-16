@@ -6,6 +6,11 @@
 
 extends Node
 
+@onready var saveCourseList = []
+@onready var currentCourse = null
+
+func loadNewCourse()-> bool:
+	return false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
